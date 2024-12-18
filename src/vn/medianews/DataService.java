@@ -50,60 +50,6 @@ public interface DataService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitDataInt", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataInt")
-    @ResponseWrapper(localName = "submitDataIntResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataIntResponse")
-    @Action(input = "http://medianews.vn/DataService/submitDataIntRequest", output = "http://medianews.vn/DataService/submitDataIntResponse")
-    public void submitDataInt(
-        @WebParam(name = "studentCode", targetNamespace = "")
-        String studentCode,
-        @WebParam(name = "qCode", targetNamespace = "")
-        String qCode,
-        @WebParam(name = "data", targetNamespace = "")
-        int data);
-
-    /**
-     * 
-     * @param studentCode
-     * @param qCode
-     * @return
-     *     returns double
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getDataDouble", targetNamespace = "http://medianews.vn/", className = "vn.medianews.GetDataDouble")
-    @ResponseWrapper(localName = "getDataDoubleResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.GetDataDoubleResponse")
-    @Action(input = "http://medianews.vn/DataService/getDataDoubleRequest", output = "http://medianews.vn/DataService/getDataDoubleResponse")
-    public double getDataDouble(
-        @WebParam(name = "studentCode", targetNamespace = "")
-        String studentCode,
-        @WebParam(name = "qCode", targetNamespace = "")
-        String qCode);
-
-    /**
-     * 
-     * @param data
-     * @param studentCode
-     * @param qCode
-     */
-    @WebMethod
-    @RequestWrapper(localName = "submitDataString", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataString")
-    @ResponseWrapper(localName = "submitDataStringResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataStringResponse")
-    @Action(input = "http://medianews.vn/DataService/submitDataStringRequest", output = "http://medianews.vn/DataService/submitDataStringResponse")
-    public void submitDataString(
-        @WebParam(name = "studentCode", targetNamespace = "")
-        String studentCode,
-        @WebParam(name = "qCode", targetNamespace = "")
-        String qCode,
-        @WebParam(name = "data", targetNamespace = "")
-        String data);
-
-    /**
-     * 
-     * @param data
-     * @param studentCode
-     * @param qCode
-     */
-    @WebMethod
     @RequestWrapper(localName = "submitDataIntArray", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataIntArray")
     @ResponseWrapper(localName = "submitDataIntArrayResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataIntArrayResponse")
     @Action(input = "http://medianews.vn/DataService/submitDataIntArrayRequest", output = "http://medianews.vn/DataService/submitDataIntArrayResponse")
@@ -132,5 +78,59 @@ public interface DataService {
         String qCode,
         @WebParam(name = "data", targetNamespace = "")
         List<String> data);
+
+    /**
+     * 
+     * @param studentCode
+     * @param qCode
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getDataDouble", targetNamespace = "http://medianews.vn/", className = "vn.medianews.GetDataDouble")
+    @ResponseWrapper(localName = "getDataDoubleResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.GetDataDoubleResponse")
+    @Action(input = "http://medianews.vn/DataService/getDataDoubleRequest", output = "http://medianews.vn/DataService/getDataDoubleResponse")
+    public double getDataDouble(
+        @WebParam(name = "studentCode", targetNamespace = "")
+        String studentCode,
+        @WebParam(name = "qCode", targetNamespace = "")
+        String qCode);
+
+    /**
+     * 
+     * @param data
+     * @param studentCode
+     * @param qCode
+     */
+    @WebMethod
+    @RequestWrapper(localName = "submitDataInt", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataInt")
+    @ResponseWrapper(localName = "submitDataIntResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataIntResponse")
+    @Action(input = "http://medianews.vn/DataService/submitDataIntRequest", output = "http://medianews.vn/DataService/submitDataIntResponse")
+    public void submitDataInt(
+        @WebParam(name = "studentCode", targetNamespace = "")
+        String studentCode,
+        @WebParam(name = "qCode", targetNamespace = "")
+        String qCode,
+        @WebParam(name = "data", targetNamespace = "")
+        int data);
+
+    /**
+     * 
+     * @param data
+     * @param studentCode
+     * @param qCode
+     */
+    @WebMethod
+    @RequestWrapper(localName = "submitDataString", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataString")
+    @ResponseWrapper(localName = "submitDataStringResponse", targetNamespace = "http://medianews.vn/", className = "vn.medianews.SubmitDataStringResponse")
+    @Action(input = "http://medianews.vn/DataService/submitDataStringRequest", output = "http://medianews.vn/DataService/submitDataStringResponse")
+    public void submitDataString(
+        @WebParam(name = "studentCode", targetNamespace = "")
+        String studentCode,
+        @WebParam(name = "qCode", targetNamespace = "")
+        String qCode,
+        @WebParam(name = "data", targetNamespace = "")
+        String data);
 
 }
